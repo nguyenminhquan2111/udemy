@@ -1,0 +1,24 @@
+.companies {
+  border-bottom: 1px solid $grey-200;
+  padding: $spacing * 4 0;
+  .companies__container {
+    text-align: center;
+    h1 {
+      @include Text(#000000, $text-xl, $text-bolder);
+    }
+    .companies__logo {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .logo__item {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        img {
+          height: 2rem;
+          padding: 0 $spacing;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.business {
+  padding: $spacing * 10 0;
+  border-bottom: 1px solid $grey-200;
+  .business__bg {
+    background-color: $blue-900;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .business__container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .business__item {
+        width: 56rem;
+        display: flex;
+        .business__content {
+          margin-right: $spacing * 10;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h1 {
+            @include Text($primary, $text-2xl, $text-bolder);
+          }
+          p {
+            @include Text($primary, $text-lg, $text-regular);
+          }
+          a {
+            width: fit-content;
+            text-align: center;
+            @include Text($primary, $text-md, $text-bolder);
+            @include Button(
+              $blue-600,
+              transparent,
+              $rounded-xs,
+              $spacing * 1.5,
+              $spacing * 2
+            );
+            &:hover {
+              background-color: $blue-700;
+            }
+          }
+          @media screen and (max-width: 1200px) {
+          }
+          @media screen and (max-width: 992px) {
+            align-items: center;
+          }
+          @media screen and (max-width: 768px) {
+          }
+          @media screen and (max-width: 576px) {
+            a {
+              width: 100%;
+            }
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+        }
+        @media screen and (max-width: 992px) {
+          img {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 768px) {
+        }
+        @media screen and (max-width: 576px) {
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  padding: 0 1rem;
+}
+
+.header .logo img {
+  width: 11.25rem;
+}
+
+.header .nav a {
+  color: #3c3b37;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.header .nav a:hover {
+  color: #0f7c90;
+}
+
+.header .search {
+  border: 1px solid #989586;
+  padding: 0.5rem;
+  border-radius: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fbfbf8;
+}
+
+.header .search input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  margin-left: 0.5rem;
+}
+
+.header .btns .btn-login {
+  color: #0f7c90;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #ffffff;
+  border: 1px solid #2896a9;
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.header .btns .btn-login:hover {
+  border-color: #1c6a78;
+  color: #094c54;
+}
+
+.header .btns .btn-signup {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #0f7c90;
+  border: 1px solid #2896a9;
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.header .btns .btn-signup:hover {
+  background-color: #094c59;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    display: none;
+  }
+}
+
+.header__mobile {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__mobile button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+}
+
+.header__mobile .logo img {
+  width: 7rem;
+}
+
+@media screen and (max-width: 576px) {
+  .header__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=product.css.map */

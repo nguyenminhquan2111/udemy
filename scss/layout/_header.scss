@@ -1,0 +1,116 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  padding: 0 (3 * $spacing);
+  z-index: 10;
+  position: relative;
+  top: 0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+  .logo {
+    img {
+      width: 8rem;
+    }
+  }
+  .nav {
+    a {
+      @include Text($grey-500, $text-sm, $text-regular);
+      text-decoration: none;
+      margin: 0 $spacing;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+  .search {
+    border: 1px solid $grey-300;
+    padding: $spacing;
+    border-radius: 300px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: $light;
+    input {
+      border: none;
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      margin-left: $spacing;
+    }
+  }
+  .btns {
+    .btn-login {
+      text-align: center;
+      @include Text($secondary, $text-md, $text-bolder);
+      @include Button(
+        $primary,
+        $blue-600,
+        $rounded-xs,
+        $spacing,
+        (3 * $spacing)
+      );
+      &:hover {
+        border-color: $blue-700;
+        color: $blue-900;
+      }
+    }
+    .btn-signup {
+      text-align: center;
+      @include Text($primary, $text-md, $text-bolder);
+      @include Button(
+        $blue-600,
+        $blue-600,
+        $rounded-xs,
+        $spacing,
+        $spacing * 3
+      );
+      &:hover {
+        background-color: $blue-700;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+  }
+  @media screen and (max-width: 992px) {
+    .nav {
+      .business {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 576px) {
+  }
+}
+.header__mobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    @include Button(transparent, transparent, 0, $spacing, $spacing * 2);
+  }
+  .logo {
+    img {
+      width: 7rem;
+    }
+  }
+  a {
+    color: $grey-300;
+    margin: $spacing;
+  }
+  @media screen and (max-width: 1200px) {
+  }
+  @media screen and (max-width: 992px) {
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+  @media screen and (max-width: 576px) {
+    a {
+      margin: $spacing * 0.5;
+    }
+  }
+}

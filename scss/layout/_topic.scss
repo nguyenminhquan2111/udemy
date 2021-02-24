@@ -1,0 +1,58 @@
+.topic {
+  .topic__container {
+    margin: $spacing * 5 auto;
+    h1 {
+      @include Text(#000000, $text-xl, $text-bolder);
+    }
+    .topic__list {
+      padding: $spacing * 4 0;
+      .topic__title {
+        h2 {
+          @include Text(#000000, $text-md, $text-bolder);
+          height: 1.5rem;
+          margin-bottom: 1.5rem;
+          margin-top: 1rem;
+        }
+        .topic__item {
+          .item {
+            height: 6rem;
+            h1 {
+              @include Text($blue-700, $text-md, $text-bolder);
+              &:hover {
+                color: $blue-800;
+                cursor: pointer;
+              }
+            }
+            p {
+              @include Text($grey-300, $text-md, $text-regular);
+            }
+
+            @media screen and (max-width: 768px) {
+              h1,
+              p {
+                font-size: $text-sm;
+              }
+            }
+            @media screen and (max-width: 576px) {
+              height: 4rem;
+            }
+          }
+        }
+      }
+    }
+    a {
+      text-align: center;
+      @include Text($primary, $text-md, $text-bolder);
+      @include Button(
+        $blue-700,
+        $blue-700,
+        $rounded-xs,
+        $spacing * 1.5,
+        $spacing * 2
+      );
+      &:hover {
+        background-color: $blue-800;
+      }
+    }
+  }
+}

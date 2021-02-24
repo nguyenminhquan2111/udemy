@@ -1,0 +1,26 @@
+.banner {
+  background: url(https://s.udemycdn.com/browse_components/shared-assets/purple-intersect.svg)
+    repeat-x #6e1a52;
+  background-position: center center;
+  height: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: $spacing * 5 0;
+  .banner__container {
+    text-align: center;
+    h1 {
+      @include Text($primary, $text-2xl, $text-bolder);
+    }
+    p {
+      @include Text($primary, $text-lg, $text-regular);
+      margin-bottom: $spacing * 3;
+    }
+    a {
+      @include Text($primary, $text-md, $text-bolder);
+      padding: $spacing * 1.5 $spacing;
+      border: 1px solid $primary;
+      border-radius: $rounded-xs;
+    }
+  }
+}

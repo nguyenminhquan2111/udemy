@@ -1,0 +1,107 @@
+.courses {
+  border-bottom: 1px solid $grey-200;
+  .courses__container {
+    margin-top: $spacing * 7;
+    padding: $spacing;
+    .courses__title {
+      h1 {
+        @include Text(#000000, $text-xl, $text-bolder);
+      }
+      p {
+        @include Text($grey-300, $text-md, $text-regular);
+      }
+    }
+    .courses__nav {
+      .courses__menu {
+        & a {
+          @include Text($grey-300, $text-md, $text-bolder);
+          position: relative;
+          padding: $spacing * 2 0;
+          margin: 0 $spacing;
+          &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0.125rem;
+            background: #000000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+          &.active::after {
+            width: 100%;
+          }
+        }
+        & a:focus,
+        & a:hover,
+        & a.active {
+          border-color: transparent;
+          background-color: transparent;
+        }
+        & a:focus,
+        & a.active {
+          color: #000000;
+        }
+      }
+      .courses__tab {
+        margin-top: $spacing * 2;
+        .courses__tab-container {
+          padding: 0;
+          .courses__tab-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: $pink;
+            align-items: center;
+            padding: ($spacing * 2) ($spacing * 5);
+            margin-bottom: $spacing * 2;
+            overflow: hidden;
+            .tab__content {
+              margin-right: $spacing * 4;
+              height: 13rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              h1 {
+                @include Text(#000000, $text-md, $text-bolder);
+              }
+              .module {
+                width: 85%;
+                height: 3.6rem;
+                overflow: hidden;
+                margin-bottom: 1rem;
+              }
+              .line-clamp {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+              }
+              p {
+                @include Text($grey-300, $text-sm, $text-regular);
+              }
+              a {
+                @include Text($blue-600, $text-sm, $text-bolder);
+              }
+            }
+            img {
+              border: 1px solid transparent;
+              border-radius: 50%;
+            }
+            @media screen and (max-width: 1200px) {
+            }
+            @media screen and (max-width: 992px) {
+            }
+            @media screen and (max-width: 768px) {
+            }
+            @media screen and (max-width: 576px) {
+              display: none;
+            }
+          }
+          .courses__tab-list {
+            @include Slider();
+          }
+        }
+      }
+    }
+  }
+}

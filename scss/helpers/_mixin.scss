@@ -1,0 +1,112 @@
+@mixin Text($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin Button($bg-color, $b, $br, $py, $px) {
+  background-color: $bg-color;
+  border: 1px solid $b;
+  border-radius: $br;
+  padding: $py $px;
+}
+
+@mixin Item-intro {
+  display: flex;
+  align-items: center;
+  padding: $spacing * 3 $spacing;
+  i {
+    color: $blue-600;
+    background-color: $blue-300;
+    padding: $spacing * 1.5;
+    border-radius: 50%;
+    margin-right: $spacing * 2;
+  }
+}
+
+@mixin Slider {
+  position: relative;
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: 20%;
+    .owl-prev,
+    .owl-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $spacing * 6;
+      height: $spacing * 6;
+      background-color: $primary;
+      position: absolute;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2),
+        0 2px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 50%;
+      outline: none;
+      span {
+        @include Text($blue-900, $text-xl, $text-bold);
+      }
+    }
+
+    .owl-next {
+      left: 98%;
+    }
+    .owl-prev {
+      right: 98%;
+    }
+  }
+
+  .slider-list-item {
+    padding: $spacing;
+    img {
+      margin-bottom: $spacing;
+      border-radius: $rounded-xs;
+      width: 100%;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    }
+    h1 {
+      @include Text(#000000, $text-sm, $text-bolder);
+      margin-bottom: 0;
+    }
+    p {
+      @include Text($grey-300, $text-xsm, $text-regular);
+      margin-bottom: 0;
+    }
+    .star {
+      display: flex;
+      align-items: center;
+      .score {
+        @include Text($orange-500, $text-md, $text-bold);
+        margin-right: $spacing;
+      }
+      i {
+        color: $orange-300;
+        font-size: $text-xsm;
+      }
+      .ratings {
+        @include Text($grey-300, $text-xsm, $text-regular);
+        margin-left: $spacing;
+      }
+    }
+    span {
+      @include Text(#000000, $text-md, $text-bold);
+    }
+    .line-through {
+      text-decoration: line-through;
+    }
+    .bestseller {
+      @include Text(#593d00, $text-xsm, $text-bolder);
+      background-color: $yellow;
+      padding: $spacing-half $spacing;
+      border-radius: $rounded-xs;
+    }
+    .highest {
+      @include Text($orange-500, $text-xsm, $text-bolder);
+      background-color: $orange-300;
+      padding: $spacing-half $spacing;
+      border-radius: $rounded-xs;
+    }
+  }
+}

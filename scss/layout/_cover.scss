@@ -1,0 +1,61 @@
+.cover {
+  .cover__container {
+    background-image: url("../img/bg-cover.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 19rem;
+    position: relative;
+    z-index: 9;
+    .cover__content {
+      width: 24rem;
+      position: absolute;
+      background-color: $primary;
+      padding: $spacing * 3;
+      top: $spacing * 3;
+      left: $spacing * 3;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2),
+        0 2px 20px 0 rgba(0, 0, 0, 0.19);
+      h1 {
+        @include Text(#000000, $text-2xl, $text-bolder);
+      }
+      .search {
+        border: 1px solid $grey-300;
+        padding: $spacing * 1.5;
+        border-radius: $rounded-xs;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        a {
+          color: $grey-300;
+        }
+        input {
+          border: none;
+          width: 100%;
+          background-color: transparent;
+          outline: none;
+          margin-left: $spacing;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+      }
+      @media screen and (max-width: 992px) {
+      }
+      @media screen and (max-width: 768px) {
+        width: 20rem;
+      }
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+    }
+    @media screen and (max-width: 992px) {
+    }
+    @media screen and (max-width: 768px) {
+      height: 15rem;
+    }
+    @media screen and (max-width: 576px) {
+      background-image: url(../img/bg-cover-mobile.jpg);
+    }
+  }
+}

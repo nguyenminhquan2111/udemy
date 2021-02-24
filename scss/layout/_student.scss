@@ -1,0 +1,11 @@
+.student {
+  .student__container {
+    margin-top: $spacing * 6;
+    h1 {
+      @include Text(#000000, $text-xl, $text-bolder);
+    }
+    .student__list {
+      @include Slider();
+    }
+  }
+}

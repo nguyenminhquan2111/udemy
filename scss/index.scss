@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+@import "./helpers/variable";
+@import "./helpers/mixin";
+
+@import "./layout/header";
+@import "./layout/cover";
+@import "./layout/intro";
+@import "./layout/courses";
+@import "./layout/student";
+@import "./layout/banner";
+@import "./layout/categories";
+@import "./layout/topic";
+@import "./layout/job";
+@import "./layout/companies";
+@import "./layout/business";
+@import "./layout/education";
+@import "./layout/footer";

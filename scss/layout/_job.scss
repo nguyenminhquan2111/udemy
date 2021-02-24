@@ -1,0 +1,73 @@
+.job {
+  padding: $spacing * 10 0;
+  border-bottom: 1px solid $grey-200;
+  .job__bg {
+    background-color: $light;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .job__container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .job__item {
+        width: 56rem;
+        display: flex;
+        .job__content {
+          margin-left: $spacing * 10;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h1 {
+            @include Text(#000000, $text-2xl, $text-bolder);
+          }
+          p {
+            @include Text($grey-300, $text-lg, $text-regular);
+          }
+          a {
+            width: fit-content;
+            text-align: center;
+            @include Text($primary, $text-md, $text-bolder);
+            @include Button(
+              $blue-600,
+              transparent,
+              $rounded-xs,
+              $spacing * 1.5,
+              $spacing * 2
+            );
+            &:hover {
+              background-color: $blue-700;
+            }
+          }
+          @media screen and (max-width: 1200px) {
+          }
+          @media screen and (max-width: 992px) {
+            align-items: center;
+          }
+          @media screen and (max-width: 768px) {
+          }
+          @media screen and (max-width: 576px) {
+            a {
+              width: 100%;
+            }
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+        }
+        @media screen and (max-width: 992px) {
+          img {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 768px) {
+        }
+        @media screen and (max-width: 576px) {
+        }
+      }
+    }
+  }
+}

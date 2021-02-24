@@ -1,0 +1,36 @@
+.intro {
+  border-bottom: 1px solid $grey-200;
+  .intro__container {
+    display: flex;
+    justify-content: space-between;
+    .intro__item {
+      @include Item-intro();
+      .intro__content {
+        h1 {
+          @include Text(#000000, $text-md, $text-bolder);
+          margin-bottom: $spacing-half;
+          @media screen and (max-width: 992px) {
+            margin-bottom: 0;
+          }
+        }
+        span {
+          @include Text($grey-500, $text-md, $text-regular);
+          line-height: 0;
+
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+  }
+  @media screen and (max-width: 992px) {
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 576px) {
+  }
+}
